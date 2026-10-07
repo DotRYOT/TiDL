@@ -3,6 +3,7 @@ import AuthSection from './components/AuthSection';
 import SearchSection from './components/SearchSection';
 import DownloadQueue from './components/DownloadQueue';
 import Header from './components/Header';
+import SystemStatus from './components/SystemStatus';
 import type { Track, DownloadItem, AuthState } from './types';
 
 export default function App() {
@@ -139,7 +140,25 @@ export default function App() {
             )}
           </div>
         )}
+
+        {/* System Status Panel */}
+        <SystemStatus />
       </main>
+
+      {/* Footer */}
+      <footer className="border-t border-[#1a1a1a] mt-12 py-6">
+        <div className="max-w-6xl mx-auto px-4 flex items-center justify-between">
+          <span className="text-xs text-[#333]">TidalDL v1.0 — Arch Linux Edition</span>
+          <div className="flex items-center gap-4">
+            <span className="text-xs text-[#333]">
+              <i className="fab fa-github mr-1" /> GitHub
+            </span>
+            <span className="text-xs text-[#333]">
+              <i className="fas fa-book mr-1" /> Docs
+            </span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
